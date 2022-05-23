@@ -1,0 +1,11 @@
+<h1>My bookings</h1>
+
+<h3>Bookings I made</h3>
+<% @bookings.each do |b| %>
+<li>Dev email: <%= b.developer.user.email %> | Description: <%= b.job %></li>
+<% end %>
+<br>
+<h3>Booking made for me</h3>
+<% @booked.each do |b| %>
+<li>User email: <%= b.user.email %></li>
+<% end %>
