@@ -11,3 +11,7 @@
   <%= f.input :job %>
   <%= f.submit :book %>
 <% end %>
+
+<%= link_to 'Edit your info', edit_developer_path(@developer) %>
+
+<%= link_to "Delete",developer_path(@developer),method: :delete,data: { confirm: "Are you sure?" } %>

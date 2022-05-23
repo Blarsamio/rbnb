@@ -23,6 +23,22 @@ class DevelopersController < ApplicationController
     end
   end
 
+  def edit
+    @developer = Developer.find(params[:id])
+  end
+
+  def update
+    @developer = Developer.find(params[:id])
+    @developer = Developer.update(developers_params)
+    redirect_to developer_path(@developer)
+  end
+
+  def destroy
+    @developer = Developer.find(params[:id])
+    @developer.destroy
+    redirect_to developers_path
+  end
+
   private
 
   def developers_params
