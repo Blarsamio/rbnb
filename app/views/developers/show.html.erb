@@ -1,0 +1,13 @@
+<h1>Developers#show</h1>
+<p>Find me in app/views/developers/show.html.erb</p>
+
+<%= @developer.user.email %>
+
+<%= @developer.rating %>
+
+<%= @developer.description %>
+
+<%= simple_form_for [@developer, @booking] do |f| %>
+  <%= f.input :job %>
+  <%= f.submit :book %>
+<% end %>
