@@ -2,10 +2,16 @@ class BookingsController < ApplicationController
   def index
     @developer = Developer.find_by(user_id: current_user.id)
     @bookings = Booking.where(user_id: current_user.id)
-    @booked = Booking.where(developer_id: @developer.id)
+    @booked = Booking.where(developer_id: @developer.id).where(status: false)
+    @accepted = @bookings.where(status: true)
   end
 
   def accept
+    booking = Booking.find(params[:id])
+    booking.status = true
+    booking.save
+
+    redirect_to bookings_path
   end
 
   def reject
