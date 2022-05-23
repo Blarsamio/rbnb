@@ -2,10 +2,15 @@
 
 <h3>Bookings I made</h3>
 <% @bookings.each do |b| %>
-<li>Dev email: <%= b.developer.user.email %> | Description: <%= b.job %></li>
+<li>Dev email: <%= b.developer.user.email %> | Job Description: <%= b.job %></li>
 <% end %>
 <br>
-<h3>Booking made for me</h3>
+<h3>Booking requested for me</h3>
 <% @booked.each do |b| %>
-<li>User email: <%= b.user.email %></li>
+<li>User email: <%= b.user.email %> | Job Description: <%= b.job %> | <%= link_to 'Accept task', accept_path(b) %></li>
+<% end %>
+<br>
+<h3>Accepted bookings ✅</h3>
+<% @accepted.each do |b| %>
+<li>User email: <%= b.user.email %> | Job Description: <%= b.job %></li>
 <% end %>
