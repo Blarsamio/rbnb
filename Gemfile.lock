@@ -264,6 +264,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   dotenv-rails
+  faker!
   font-awesome-sass (~> 5.15)
   jbuilder (~> 2.7)
   listen (~> 3.3)
@@ -287,4 +288,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.10
+   2.3.13
