@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts 'creating seeds'
+
+10.times do
+  @user = User.create(email: Faker::Internet.free_email, password: 'hellop')
+  @developer = Developer.new(rating: 4, description: 'testing devs')
+  @developer.user = @user
+  @developer.save
+end
+
+# 10.times do { Developer.create() }

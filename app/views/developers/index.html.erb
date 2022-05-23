@@ -1,0 +1,13 @@
+<h1>Developers#index</h1>
+<p>Find me in app/views/developers/index.html.erb</p>
+
+<ul>
+<% @developers.each do |d| %>
+<li><%= link_to d.user.email, developer_path(d) %> <%= d.rating %> stars <%= d.description %></li>
+<% end %>
+</ul>
+<br>
+<%= link_to 'See my bookings', bookings_path %>
+<br>
+<h3>Do you want to become a developer?</h3>
+<%= link_to 'Fill a form', new_developer_path %>
