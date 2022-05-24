@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :developers, only: %i[create index new show] do
+  resources :developers, only: %i[create index new show edit update destroy] do
     resources :bookings, only: :create
   end
   resources :bookings, only: %i[index destroy]

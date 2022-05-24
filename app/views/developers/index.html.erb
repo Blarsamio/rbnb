@@ -1,9 +1,9 @@
-<h1>Developers#index</h1>
-<p>Find me in app/views/developers/index.html.erb</p>
+<h1>Find the best developer now!</h1>
 
-<ul>
+<ul class="developer-list">
 <% @developers.each do |d| %>
-<li><%= link_to d.user.email, developer_path(d) %> <%= d.rating %> stars <%= d.description %></li>
+<li><%= d.user.email %>
+<%= link_to 'view profile',developer_path(d) %> <%= d.rating %> stars <%= d.description %></li>
 <% end %>
 </ul>
 <br>

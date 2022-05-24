@@ -11,3 +11,10 @@
   <%= f.input :job %>
   <%= f.submit :book %>
 <% end %>
+
+  <% if policy(@developer).update? %>
+      <%= link_to "Edit", edit_developer_path(@developer) %>
+  <% end %>
+  <% if policy(@developer).destroy? %>
+    <%= link_to "Delete",developer_path(@developer),method: :delete,data: { confirm: "Are you sure?" } %>
+  <% end %>
