@@ -3,7 +3,6 @@
     <h3>< A-Rented-Development /></h3>
     <p>A-rented-development is a website made with <i class="far fa-heart"></i> by three geeks</p>
     <p>< Luisi > < Nacho > < Pato ></p>
-</div>
   <div class="logos">
      <ul class="socials">
       <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -13,14 +12,15 @@
       <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
     </ul>
   </div>
+</div>
   <div class="footer-bottom">
     <p>Copyright ©2022 <span class='team'>Gasho Team</span></p>
   </div>
   <div class="footer-menu">
     <ul class="f-menu">
-        <li><a href="home">Home</a></li>
+        <li><%= link_to '/home' do %> Home <% end %></li>
         <li><a href="https://pbs.twimg.com/profile_images/1220073059467583496/y2rLoig5_400x400.jpg">About</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><%= link_to new_contact_path do %> Contact Us <% end %></li>
         <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Secret Gem</a></li>
     </ul>
   </div>

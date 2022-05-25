@@ -18,3 +18,4 @@ import "typed.js"
 //= require lib/typed
 //= require lib/typed-implementation
 require("packs/typed")
+window.$ = window.jQuery = require("jquery");
