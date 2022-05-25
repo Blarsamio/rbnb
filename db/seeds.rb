@@ -16,4 +16,6 @@ puts 'creating seeds'
   @developer.save
 end
 
+puts "#{Developer.count} developers created"
+
 # 10.times do { Developer.create() }
