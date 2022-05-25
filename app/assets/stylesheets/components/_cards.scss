@@ -39,6 +39,7 @@ h1 {
 .flip-card-front {
   background-color: rgba(232, 232, 232, 0.6);
   color: black;
+  border : 1px solid #3795e6;
 }
 
 /* Style the back side */
@@ -46,6 +47,7 @@ h1 {
   background-color: rgba(232, 232, 232, 0.6);
   color: white;
   transform: rotateY(180deg);
+  border : 1px solid #3795e6;
 }
 
 .rounded {
