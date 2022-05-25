@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+import "typed.js"
+//= require lib/typed
+//= require lib/typed-implementation
+require("packs/typed")
