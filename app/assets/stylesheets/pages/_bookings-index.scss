@@ -9,31 +9,41 @@ h1{
 .booking{
   background-color: rgb(194, 194, 194);
   padding: 25px;
-  margin: 20px;
   border-radius: 10px;
+  li{
+    border-bottom: 1px solid black;
+    padding: 15px;
+  }
 }
 .booked{
   background-color: rgb(194, 194, 194);
   padding: 25px;
-  margin: 15px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
+  li{
+    border-bottom: 1px solid black;
+    padding: 15px;
+  }
 }
 .accepted{
+  h3{
+  width: 100%;
+  }
   background-color: rgb(194, 194, 194);
-  padding: 25px;
-  margin: 20px;
   border-radius: 10px;
+  li{
+    border-bottom: 1px solid black;
+    padding: 15px;
+  }
 }
 
 .container{
   h3{
     text-align: center;
-    background-color: rgb(164, 164, 164);
+    background-color: rgba(164, 164, 164, 0.8);
     font-weight:500;
     padding: 10px;
     border-radius: 10px;
-    margin: 15px;
   }
 }
