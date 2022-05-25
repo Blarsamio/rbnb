@@ -1,7 +1,7 @@
 import Typed from 'typed.js';
 
 var options = {
-  strings: ['<i>First</i> sentence.', '&amp; find the best dev for your project'],
+  strings: [' start today and find the best dev for your project', 'browse between everyone we have in stock'],
   typeSpeed: 100
 };
 
