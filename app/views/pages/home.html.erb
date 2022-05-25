@@ -1,9 +1,16 @@
 <div class="container">
-  <div class="header">
-    <h1>< Get the right <span class="diff">developer</span> for you today ></h1>
+  <div class="header1">
+      <h1>< Get the right <%= link_to 'developers' do  %><span class="diff">developer</span><% end %> for you today ></h1>
   </div>
   <div>
-    <%# <img class='home-img d-flex' src="https://cdn.dribbble.com/users/2146640/screenshots/6659142/getting_clear_tw_4x.jpg?compress=1&resize=1200x900&vertical=top" alt=""> %>
-    <%= link_to '', developers_path, class: 'banner' %>
-  </div>
+    <div class="head-wrap shift-text">
+		    <div class="text-editor-wrap">
+			    <div class="title-bar"><span class="title">typed.js — bash — 80x<span class="terminal-height">10</span></span></div>
+			      <div class="text-body">
+				     $ <span class="element"></span><span class="typed-cursor"></span>
+			      </div>
+		      </div>
+          <%# <button type="button" class="btn btn-dark">Find your developer here!</button> %>
+	    </div>
+    </div>
 </div>
