@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 .header {
   align-items: center;
   text-align: center;
@@ -11,33 +12,89 @@
   color: #3795E6;
 }
 
+.text-editor-wrap {
+  display: block;
+  margin: auto;
+  max-width: 530px;
+  border-radius: 10px;
+  // box-shadow: rgb(0 0 0 / 80%) 0px 20px 70px;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.title-bar {
+  padding: 5px 0;
+  font-size: 0.75em;
+  text-align: center;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  border-bottom: #6a6a6a 1px solid;
+}
+
+.text-body {
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  color: white !important;
+  font-size: 1.45em;
+  line-height: 1.40em;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.header1 {
+  width: 100%;
+  min-height: 0;
+  margin: 0 auto 30px;
+  padding: 10px 0;
+}
+
+.btn-dark{
+  display: block;
+  border-radius: 10px;
+  align-items: center;
+}
+
 // .home-img {
 //   margin: 20px;
 // }
 
-.banner {
-  background-image: url('https://cdn.dribbble.com/users/2146640/screenshots/6659142/getting_clear_tw_4x.jpg?compress=1&resize=1200x900&vertical=top');
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  margin: 0px auto;
-  border-radius: 10px;
-}
+// .banner {
+//   background-image: url('https://cdn.dribbble.com/users/2146640/screenshots/6659142/getting_clear_tw_4x.jpg?compress=1&resize=1200x900&vertical=top');
+//   display: flex;
+//   width: 100%;
+//   height: 100vh;
+//   margin: 0px auto;
+//   border-radius: 10px;
+// }
 
-.banner:hover {
-  background-image: url('final-banner.jpg'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-  background-size: 1200px 900px;
-  // background-repeat: no-repeat;
-  // display: block;
-  // text-align: center;
-  // width: 100%;
-  // height: 80vh;
-  // margin: 0px auto;
-  // padding: 20px;
-  // color: white;
-  // text-transform: uppercase;
-  // font-family: Arial;
-  // border: 1px solid #fff;
-  // text-decoration: none;
-  // border-radius: 10px;
-}
+// .banner:hover {
+//   background-image: url('final-banner.jpg'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+//   background-size: 1200px 900px;
+//   // background-repeat: no-repeat;
+//   // display: block;
+//   // text-align: center;
+//   // width: 100%;
+//   // height: 80vh;
+//   // margin: 0px auto;
+//   // padding: 20px;
+//   // color: white;
+//   // text-transform: uppercase;
+//   // font-family: Arial;
+//   // border: 1px solid #fff;
+//   // text-decoration: none;
+//   // border-radius: 10px;
+// }
