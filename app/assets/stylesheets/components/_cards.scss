@@ -37,13 +37,21 @@ h1 {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: rgb(205, 205, 205);
+  background-color: rgba(232, 232, 232, 0.6);
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: hsl(0, 0%, 83%);
+  background-color: rgba(232, 232, 232, 0.6);
   color: white;
   transform: rotateY(180deg);
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.row {
+  --bs-gutter-x: 1rem !important;
 }
