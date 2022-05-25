@@ -57,3 +57,9 @@ h1 {
 .row {
   --bs-gutter-x: 1rem !important;
 }
+
+.rounded-circle {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover;
+}
