@@ -16,6 +16,7 @@ class DevelopersController < ApplicationController
   def create
     @developer = Developer.new(developers_params)
     @developer.user = current_user
+    @developer.language = params[:language]
 
     if @developer.save
       redirect_to developers_path

@@ -5,13 +5,15 @@
             <div class="flip-card-inner">
               <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
               <img src=<%= @photos.sample %> alt="" width="100" class="rounded-circle">
-                <h5 class="mb-0">Dev name</h5><span class="small text-uppercase text-muted"><%= d.description %><br> <%= d.user.email %> </span>
-                <br>
-                <br>
+                <h5 class="mb-0"><%= d.first_name %></h5><span class="small text-uppercase text-muted">Expert in:<%= d.language %><br> <%= d.user.email %> </span>
+                <% rating = d.rating.to_i %>
+                <% rating.times do %>
+                  ★
+                <% end %>
               </div>
               <div class="flip-card-back d-flex flex-column justify-content-between rounded">
                 <h2 class='pt-3'>Why me?</h2>
-                <span class="small text-uppercase text-muted"> Graduatd from Le Wagon <br> Expert in JS, CSS, HTML</span>
+                <span class="small text-uppercase text-muted"><%= d.description %></span>
                   <ul class="social mb-0 list-inline mt-3">
                     <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
                     <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
