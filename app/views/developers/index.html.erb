@@ -3,7 +3,13 @@
 <ul class="developer-list">
 <% @developers.each do |d| %>
 <li><%= d.user.email %>
-<%= link_to 'view profile',developer_path(d) %> <%= d.rating %> stars <%= d.description %></li>
+  <%= link_to 'view profile',developer_path(d) %> <%= d.rating %> stars <%= d.description %></li>
+  <% if policy(d).update? %>
+    <%= link_to "Edit", edit_developer_path(d) %>
+  <% end %>
+  <% if policy(d).destroy? %>
+    <%= link_to "Delete",developer_path(d),method: :delete,data: { confirm: "Are you sure?" } %>
+  <% end %>
 <% end %>
 </ul>
 <br>

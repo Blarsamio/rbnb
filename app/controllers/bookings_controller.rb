@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @developer = Developer.find_by(user_id: current_user.id)
-    @bookings = Booking.where(user_id: current_user.id)
+    @bookings = policy_scope(Booking).where(user_id: current_user.id)
     @booked = Booking.where(developer_id: @developer.id).where(status: false)
     if @booked.nil?
       render :index
@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
   def accept
     booking = Booking.find(params[:id])
     booking.status = true
+    authorize(booking)
     booking.save
 
     redirect_to bookings_path
@@ -25,7 +26,8 @@ class BookingsController < ApplicationController
     @developer = Developer.find(params[:developer_id])
     @booking.developer = @developer
     @booking.user = current_user
-    @booking.save
+    @booking.save!
+    authorize(@booking)
 
     redirect_to bookings_path
   end

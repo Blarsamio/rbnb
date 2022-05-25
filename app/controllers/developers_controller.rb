@@ -1,5 +1,4 @@
 class DevelopersController < ApplicationController
-  before_action :authorize_admin, only: :index
 
   def index
     # @developers = Developer.all
@@ -31,11 +30,12 @@ class DevelopersController < ApplicationController
 
   def edit
     @developer = Developer.find(params[:id])
+    authorize @developer
   end
 
   def update
     @developer = Developer.find(params[:id])
-    @developer.update(developers_params)
+    @developer.update(:description)
     authorize @developer
     redirect_to developer_path(@developer)
   end
