@@ -22,7 +22,7 @@
 <fieldset>
 <legend><span class="number">2</span> Additional Info</legend>
 <%= f.input :address, placeholder:"Your Address *", label: false %>
-<%= f.input :image, placeholder:"Profile picture URL *", label: false %>
+<%= f.file_field :image, placeholder:"Profile picture URL *", label: false %>
 </fieldset>
 <%= f.submit :submit %>
 <% end %>
