@@ -1,0 +1,39 @@
+.container{
+  margin: auto;
+}
+h1{
+  font-weight: bolder;
+  margin: 25px;
+}
+
+.booking{
+  background-color: rgb(194, 194, 194);
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.booked{
+  background-color: rgb(194, 194, 194);
+  padding: 25px;
+  margin: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.accepted{
+  background-color: rgb(194, 194, 194);
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.container{
+  h3{
+    text-align: center;
+    background-color: rgb(164, 164, 164);
+    font-weight:500;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+  }
+}

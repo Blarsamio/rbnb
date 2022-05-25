@@ -1,30 +1,29 @@
 <div class="container">
-  <div class="row justify-content-around">
   <h1>My bookings</h1>
-    <div class="col-xl-3 col-sm-6 mb-5">
-      <h3>Bookings I made</h3>
-      <div>
-      <% @bookings.each do |b| %>
-        <li>Dev email: <%= b.developer.user.email %> | Job Description: <%= b.job %></li>
-      <% end %>
+  <div class="row justify-content-around">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <h3>Bookings I made</h3>
+      <div class="booking">
+        <% @bookings.each do |b| %>
+          <li>Dev email: <%= b.developer.user.email %> <br> Job Description: <%= b.job %></li>
+        <% end %>
       </div>
     </div>
-    <br>
-    <div class="col-xl-3 col-sm-6 mb-5">
-      <h3>Booking requested for me</h3>
-      <div>
-      <% @booked.each do |b| %>
-        <li>User email: <%= b.user.email %> <br> <%= b.job %> <br> <%= link_to 'Accept task', accept_path(b), class: "btn btn-primary" %></li>
-      <% end %>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <h3>Booking requested for me</h3>
+      <div class="booked">
+        <% @booked.each do |b| %>
+          <li>User email: <%= b.user.email %> <br> <%= b.job %> <br> <%= link_to 'Accept task', accept_path(b), class: "btn btn-primary" %> <%= link_to "Reject task", reject_path(b),method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></li>
+        <% end %>
       </div>
     </div>
-  <br>
-    <div class="col-xl-3 col-sm-6 mb-5">
-      <h3>Accepted bookings ✅</h3>
-      <div>
-      <% @accepted.each do |b| %>
-        <li>User email: <%= b.user.email %> | Job Description: <%= b.job %></li>
-      <% end %>
+      <br>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <h3>Accepted bookings</h3>
+      <div class="accepted">
+        <% @accepted.each do |b| %>
+        <li>User email: <%= b.user.email %> <br> Job Description: <%= b.job %></li>
+        <% end %>
       </div>
     </div>
   </div>
