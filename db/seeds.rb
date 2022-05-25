@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+User.destroy_all
+Developer.destroy_all
 puts 'creating seeds'
 
 10.times do
