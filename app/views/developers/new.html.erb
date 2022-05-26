@@ -1,22 +1,20 @@
 <div class="form-style-5">
-<%= simple_form_for @developer do |f| %>
-<fieldset>
-<legend><span class="number">1</span> Developer Info</legend>
-<%= f.input :first_name, placeholder:"Your First Name *", label: false %>
-<%= f.input :last_name, placeholder:"Your Last Name *", label: false %>
-<%= f.input :description, as: :text, placeholder:"About yourself, special skills, your hourly rate", label: false %>
+  <%= simple_form_for @developer do |f| %>
+    <fieldset>
+    <legend><span class="number">1</span> Developer Info</legend>
+    <%= f.input :first_name, placeholder:"Your First Name *", label: false %>
+    <%= f.input :last_name, placeholder:"Your Last Name *", label: false %>
+    <%= f.input :description, as: :text, placeholder:"About yourself, special skills, your hourly rate", label: false %>
 <label for="language">Preferred Programmimg language</label>
-<select id="language" name="language">
-<optgroup>
-  <option value="javascript">JavaScript</option>
-  <option value="php">PHP</option>
-  <option value="java">Java</option>
-  <option value="golang">Golang</option>
-  <option value="python">Python</option>
-  <option value="c#">C#</option>
-  <option value="C++">C++</option>
-  <option value="erlang">Erlang</option>
-</optgroup>
+<select id="language" name="language" multiple>
+  <option value="1">JavaScript</option>
+  <option value="2">PHP</option>
+  <option value="3">Java</option>
+  <option value="4">Golang</option>
+  <option value="5">Python</option>
+  <option value="6">C#</option>
+  <option value="7">C++</option>
+  <option value="8">Erlang</option>
 </select>
 </fieldset>
 <fieldset>
