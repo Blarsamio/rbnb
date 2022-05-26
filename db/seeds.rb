@@ -11,7 +11,7 @@ Booking.destroy_all
 Developer.destroy_all
 User.destroy_all
 puts 'creating seeds'
-image_url = "https://api.lorem.space/image/face?w=150&h=150"
+image_url = ("https://source.unsplash.com/random/300×300/?fake-face")
 
 10.times do
   @user = User.create(email: Faker::Internet.free_email, password: 'hellop')
