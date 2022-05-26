@@ -6,14 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'open-uri'
 
+Booking.destroy_all
+Developer.destroy_all
+User.destroy_all
 puts 'creating seeds'
 
 10.times do
-  @user = User.create(email: Faker::Internet.free_email, password: 'hellop')
-  @developer = Developer.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_name, rating: 4, description: 'testing devs', language: Faker::ProgrammingLanguage.name)
-  @developer.user = @user
-  @developer.save
+  image = URI.open("https://source.unsplash.com/random/300x300/?fake-face")
+  user = User.create(email: Faker::Internet.free_email, password: 'hellop')
+  developer = Developer.new(first_name: Faker::JapaneseMedia::DragonBall.character, rating: Faker::Number.between(from: 1, to: 5), description: Faker::GreekPhilosophers.quote, last_name: Faker::JapaneseMedia::DragonBall.planet, address: Faker::Address.full_address, language: Faker::ProgrammingLanguage.name)
+  developer.photo.attach(io: image, filename: Faker::Internet.free_email + "photo.png", content_type: 'image/png')
+  developer.user = user
+  developer.save
 end
 
 puts "#{Developer.count} developers created"

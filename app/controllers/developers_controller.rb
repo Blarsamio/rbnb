@@ -22,7 +22,6 @@ class DevelopersController < ApplicationController
     @developer = Developer.new(developers_params)
     @developer.user = current_user
     @developer.language = params[:language]
-
     if @developer.save
       redirect_to developers_path
     else
@@ -33,6 +32,6 @@ class DevelopersController < ApplicationController
   private
 
   def developers_params
-    params.require(:developer).permit(:rating, :description, :first_name, :last_name, :language, :image, :address)
+    params.require(:developer).permit(:rating, :description, :first_name, :last_name, :language, :photo, :address)
   end
 end
