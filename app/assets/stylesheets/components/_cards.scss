@@ -8,6 +8,7 @@ h1 {
   background-color: rgba(0, 0, 37, 0.8);
   padding: 10px;
   text-align: center;
+  width: 100;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -46,7 +47,6 @@ h1 {
 .flip-card-front {
   background-color: rgba(232, 232, 232, 0.6);
   color: black;
-  border : 1px solid #3795e6;
 }
 
 /* Style the back side */
@@ -54,7 +54,6 @@ h1 {
   background-color: rgba(232, 232, 232, 0.6);
   color: white;
   transform: rotateY(180deg);
-  border : 1px solid #3795e6;
 }
 
 .rounded {
@@ -70,3 +69,32 @@ h1 {
   height: 100px !important;
   object-fit: cover;
 }
+
+.main-card {
+  color: aqua;
+}
+
+.hire-btn {
+  border-radius: 0 0 10px 10px !important;
+  padding: 10px;
+  color: white;
+}
+
+.hire-btn:hover {
+  color: #c2e3ff;
+}
+
+.b-back {
+  background-color: #c2e3ff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.unround {
+  border-radius: 0 !important;
+}
+
+// * {
+//   font-family: 'Montserrat', sans-serif;
+//   font-weight: bolder;
+// }
