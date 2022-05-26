@@ -11,7 +11,7 @@ puts 'creating seeds'
 
 10.times do
   @user = User.create(email: Faker::Internet.free_email, password: 'hellop')
-  @developer = Developer.new(rating: 4, description: 'testing devs')
+  @developer = Developer.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_name, rating: 4, description: 'testing devs', language: Faker::ProgrammingLanguage.name)
   @developer.user = @user
   @developer.save
 end
