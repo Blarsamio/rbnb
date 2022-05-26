@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @developer = Developer.find_by(id: current_user.id)
+    @developer = Developer.find_by(user_id: current_user.id)
     @bookings = Booking.where(user_id: current_user.id)
     @booked = Booking.where(developer_id: @developer.id).where(status: false)
     @accepted = @bookings.where(status: true)
