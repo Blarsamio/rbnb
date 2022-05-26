@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2022_05_25_132610) do
     t.string "first_name"
     t.string "last_name"
     t.string "address"
-    t.string "image_url"
+    t.string "image"
     t.string "language"
     t.index ["user_id"], name: "index_developers_on_user_id"
   end
