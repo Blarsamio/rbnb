@@ -1,4 +1,4 @@
-<h1>Our Developers</h1>
+<h1 class='dev-header'>$ <span class='diff'>Developer</span>.all</h1><span class ></span>
 <br>
 <div class="container">
   <%= form_tag developers_path, method: :get do %>
@@ -9,7 +9,9 @@
     %>
    <%= submit_tag "Search", class: "btn btn-primary" %>
    <% end %>
+
    <div class="row justify-content-center">
+   <% if @mydev = false %>
     <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
       <div class="flip-card-inner">
         <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
@@ -26,10 +28,11 @@
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
           </ul>
-          <%= link_to 'Become a developer', new_developer_path, class: 'btn btn-primary' %>
+          <%= link_to '$ Developer.new', new_developer_path, class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
+    <% end %>
       <% @developers.each do |d| %>
         <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
             <div class="flip-card-inner">

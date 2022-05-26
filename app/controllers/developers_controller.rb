@@ -6,7 +6,10 @@ class DevelopersController < ApplicationController
     else
       @developers = Developer.all
     end
-    @photos = ['https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1651129481/cdowzyhiutl7wuxvxpqt.jpg', 'https://avatars.githubusercontent.com/u/94052650?v=4', 'https://avatars.githubusercontent.com/u/101596254?v=4', 'https://avatars.githubusercontent.com/u/99811063?v=4', 'https://avatars.githubusercontent.com/u/47982114?v=4', 'https://avatars.githubusercontent.com/u/102415406?v=4', 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1652454583/xfegxdz3tmqjcbj6c89t.jpg', 'https://avatars.githubusercontent.com/u/101748011?v=4', 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1632299096/lugr6zapkeya0sadlnvr.jpg', 'https://avatars.githubusercontent.com/u/94487726?v=4', 'https://avatars.githubusercontent.com/u/98890043?v=4']
+
+    if @developers.find_by(user_id: current_user.id)
+      @mydev = @developers.find_by(user_id: current_user.id)
+    end
   end
 
   def show
