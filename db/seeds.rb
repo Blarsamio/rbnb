@@ -20,7 +20,6 @@ puts 'creating seeds'
   developer.photo.attach(io: image, filename: Faker::Internet.free_email + "photo.png", content_type: 'image/png')
   developer.user = user
   developer.save
-  sleep 5
 end
 
 puts "#{Developer.count} developers created"
