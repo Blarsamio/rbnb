@@ -9,13 +9,13 @@
   // background-color: aliceblue;
 }
 
-.back {
-  background: #654ea3;
-  background: linear-gradient(to right, #cecece, #555555);
-  min-height: 100vh;
-  overflow-x:hidden;
-  border-radius: 10px;
-}
+// .back {
+//   background: #654ea3;
+//   background: linear-gradient(to right, #cecece, #555555);
+//   min-height: 100vh;
+//   overflow-x:hidden;
+//   border-radius: 10px;
+// }
 
 
 .width {
@@ -26,4 +26,86 @@
 
 .col-md-5 {
   width: 80% !important;
+}
+
+.about-main {
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  color: white !important;
+  font-size: 1.45em;
+  line-height: 1.40em;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.hdr {
+  padding: 5px 0;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  font-size: 0.75em;
+  text-align: center;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+}
+
+.radius {
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 0px 0px 10px 10px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  color: white !important;
+  font-size: 1.45em;
+  line-height: 1.40em;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.form-control:focus{
+  background-color:rgba(0, 0, 0, 0.75);
+  border :none !important;
+  // shadow :none !important;
+}
+
+.form-label {
+  display: flex;
+  border-radius: 10px 10px 0px 0px;
+  justify-content: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  font-size: 0.75em;
+  text-align: center;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  margin-bottom: 0 !important;
+}
+
+.asd {
+  border-radius: 10px;
+}
+
+.form1 {
+  padding : 0;
+  border-radius: 10px;
 }
