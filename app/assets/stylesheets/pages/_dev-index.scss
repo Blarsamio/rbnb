@@ -1,0 +1,38 @@
+.dev-header {
+  padding: 5px 0;
+  font-size: 0.75em;
+  text-align: center;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  border-bottom: #6a6a6a 1px solid;
+}
+
+.index-container {
+  display: block;
+  margin: auto;
+  max-width: 530px;
+  border-radius: 10px;
+  // box-shadow: rgb(0 0 0 / 80%) 0px 20px 70px;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.star-container {
+  display: flex;
+  flex-direction: row;
+}

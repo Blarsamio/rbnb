@@ -20,11 +20,8 @@
 @import "components/sign_up";
 @import "pages/contact";
 @import "pages/new-dev";
+@import "pages/dev-index";
 
-.main-container{
+.main-container {
   min-height: calc(100vh - 50px - 152px);
 }
-
-// * {
-//   background-image: url("app/assets/images/back.png")
-// }
