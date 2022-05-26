@@ -11,11 +11,12 @@ Booking.destroy_all
 Developer.destroy_all
 User.destroy_all
 puts 'creating seeds'
-# images = "https://api.lorem.space/image/face?w=150&h=150"
+image_url = "https://api.lorem.space/image/face?w=150&h=150"
 
 10.times do
   @user = User.create(email: Faker::Internet.free_email, password: 'hellop')
   @developer = Developer.new(first_name: Faker::JapaneseMedia::DragonBall.character, rating: Faker::Number.between(from: 1, to: 5), description: Faker::GreekPhilosophers.quote, last_name: Faker::JapaneseMedia::DragonBall.planet, address: Faker::Address.full_address, language: Faker::ProgrammingLanguage.name)
+  @developer.image = image_url
   @developer.user = @user
   @developer.save
 end

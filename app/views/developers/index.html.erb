@@ -26,7 +26,7 @@
         <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
             <div class="flip-card-inner">
               <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
-              <%# <%= image_tag(d.image, class: "rounded-circle") %>
+              <%= image_tag d.image, class: "rounded-circle" %>
                 <h5 class="mb-0"><%= d.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <%= d.language %><br> <%= d.user.email %> </span>
                 <% rating = d.rating.to_i %>
                 <% rating.times do %>
