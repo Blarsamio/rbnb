@@ -1,4 +1,4 @@
-#container{
+.container{
   margin: auto;
 }
 h1{
@@ -7,43 +7,67 @@ h1{
 }
 
 .booking{
-  background-color: rgb(194, 194, 194);
-  padding: 25px;
   border-radius: 10px;
-  li{
-    border-bottom: 1px solid black;
-    padding: 15px;
-  }
+  background-color: #1B263B;
+
 }
 .booked{
-  background-color: rgb(194, 194, 194);
-  padding: 25px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
-  li{
-    border-bottom: 1px solid black;
-    padding: 15px;
-  }
+  background-color: #1B263B;
+
 }
 .accepted{
-  h3{
   width: 100%;
-  }
-  background-color: rgb(194, 194, 194);
+  background-color: #ACC196 !important;
   border-radius: 10px;
-  li{
-    border-bottom: 1px solid black;
-    padding: 15px;
+}
+
+.container{
+  h3{
+    margin: 0;
+    text-align: center;
+    font-weight:500;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
   }
 }
 
-#container{
-  h3{
-    text-align: center;
-    background-color: rgba(164, 164, 164, 0.8);
-    font-weight:500;
-    padding: 10px;
-    border-radius: 10px;
+  .book{
+  background-color: rgb(234, 234, 234);
+  border-bottom: 1px solid #1B263B;
+  width: 100%;
+  padding: 8px;
   }
+
+.btn-accept{
+  background-color: rgb(234, 234, 234);
+  color: #ACC196;
+  width: 50%;
+
+  &:hover{
+    background-color: #ACC196;
+    color: white;
+  }
+}
+
+.btn-reject{
+  background-color: rgb(234, 234, 234);
+  color: rgb(144, 79, 79);
+  width: 50%;
+
+  &:hover{
+    background-color: rgb(151, 90, 90);
+    color: white;
+  }
+}
+
+.status{
+  width: 10%;
+}
+
+.request{
+  width: 100%;
 }
