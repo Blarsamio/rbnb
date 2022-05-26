@@ -51,7 +51,7 @@
                 </ul>
             </div>
             <div class="flip-card-back d-flex flex-column justify-content-between rounded">
-              <%= link_to 'My Account', edit_user_registration_path, class: 'b-back' %>
+              <h2 class='b-back'>This is me!</h2>
               <span class="small text-uppercase text-muted"><%= @mydev.description %></span>
               <ul class="social mb-0 list-inline mt-3">
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
@@ -59,7 +59,7 @@
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
               </ul>
-              <%= link_to 'Edit profile', developer_path(@mydev), class: 'btn btn-primary hire-btn unround' %>
+              <%= link_to 'Edit profile', edit_user_registration_path, class: 'btn btn-primary hire-btn unround' %>
               <%= link_to 'My Bookings', bookings_path, class: 'btn btn-primary hire-btn' %>
             </div>
           </div>
