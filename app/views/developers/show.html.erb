@@ -29,15 +29,19 @@
               </li>
               </ul>
           </div>
+          <div class="about-hdr">
+            <div class="px-4 py-3 radius">
+			        <div class="hdr"><span class="title">about-me — bash — 80x<span class="terminal-height">10</span></span></div>
+                <div class="about-main p-4">
+                   <span class="element2"></span><span class="typed-cursor"></span>
+                   <br>
 
-          <div class="px-4 py-3">
-            <h5 class="mb-0">About</h5>
-              <div class="p-4 rounded shadow-sm bg-light">
-                <p class="font-italic mb-0">Web Developer, expert it: <%= @developer.language %></p>
-                <p class="font-italic mb-0">Lives in: <%= @developer.address %></p>
-                <p class="font-italic mb-0"><%= @developer.user.email %></p>
-                <p class="font-italic mb-0"><%= @developer.description %></p>
-              </div>
+                      <p class="element2 hidden"> web developer, expert in: <%= @developer.language %></p>
+                      <p class="element2 hidden">lives in: <%= @developer.address %></p>
+                      <p class="element2 hidden"><%= @developer.user.email %></p>
+                      <p class="element2 hidden"><%= @developer.description %></p>
+                </div>
+            </div>
           </div>
           <div class="py-4 px-4">
             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -61,11 +65,11 @@
         </div>
       </div>
       <br>
-      <div id='form'>
+      <div class='form'>
         <%= simple_form_for [@developer, @booking] do |f| %>
-        <%= f.input :job, :as => :text, label: 'Describe the work you want.' %>
-        <%= f.submit :book , class: 'btn btn-primary'%>
+        <%= f.input :job, :as => :text, label: 'describe-the-work-you-want — bash — 80x' %>
+        <%= f.submit :book , class: 'btn btn-outline-dark btn-sm btn-block'%>
         <% end %>
-    ``</div>
     </div>
+  </div>
 </div>
