@@ -11,7 +11,7 @@
    <% end %>
 
    <div class="row justify-content-center">
-   <% if @mydev = false %>
+   <% if @mydev == nil %>
     <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
       <div class="flip-card-inner">
         <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
@@ -20,7 +20,7 @@
                   ⭐⭐⭐⭐⭐
         </div>
         <div class="flip-card-back d-flex flex-column justify-content-between rounded">
-          <h2 class='pt-3'>Become a developer today!</h2>
+          <h2 class='b-back'>Become a developer today!</h2>
           <span class="small text-uppercase text-muted"></span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
@@ -28,24 +28,50 @@
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
           </ul>
-          <%= link_to '$ Developer.new', new_developer_path, class: 'btn btn-primary' %>
+          <%= link_to '$ Developer.new', new_developer_path, class: 'btn btn-primary hire-btn' %>
         </div>
       </div>
     </div>
+    <% else %>
+            <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
+            <div class="flip-card-inner main-card">
+              <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
+              <%= image_tag @mydev.photo, class: "rounded-circle" %>
+                <h5 class="mb-0"><%= @mydev.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <em><%= @mydev.language %></em><br> <%= @mydev.user.email %> </span>
+                <% rating = @mydev.rating.to_i %>
+                <% rating.times do %>
+                  ⭐
+                <% end %>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-between rounded">
+              <h2 class='b-back'>My Account</h2>
+              <span class="small text-uppercase text-muted"><%= @mydev.description %></span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+              <%= link_to 'Edit profile', '#', class: 'btn btn-primary hire-btn unround' %>
+              <%= link_to 'My Bookings', bookings_path, class: 'btn btn-primary hire-btn' %>
+            </div>
+          </div>
+        </div>
     <% end %>
       <% @developers.each do |d| %>
+      <% next if d.user == current_user %>
         <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
             <div class="flip-card-inner">
               <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
               <%= image_tag d.photo, class: "rounded-circle" %>
-                <h5 class="mb-0"><%= d.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <%= d.language %><br> <%= d.user.email %> </span>
+                <h5 class="mb-0"><%= d.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <em><%= d.language %></em><br> <%= d.user.email %> </span>
                 <% rating = d.rating.to_i %>
                 <% rating.times do %>
                   ⭐
                 <% end %>
             </div>
             <div class="flip-card-back d-flex flex-column justify-content-between rounded">
-              <h2 class='pt-3'>Why me?</h2>
+              <h2 class='b-back'>Why me?</h2>
               <span class="small text-uppercase text-muted"><%= d.description %></span>
               <ul class="social mb-0 list-inline mt-3">
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
@@ -53,7 +79,7 @@
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
               </ul>
-              <%= link_to 'Hire', developer_path(d), class: 'btn btn-primary' %>
+              <%= link_to 'Hire', developer_path(d), class: 'btn btn-primary rounded-bottom hire-btn' %>
             </div>
           </div>
         </div>
