@@ -5,7 +5,7 @@
   overflow: hidden;
   border-radius: 10px;
   padding: 55px 55px 37px;
-  background: -webkit-linear-gradient(top,#3795e6,#acc196);
+  background: #0d1b2a;
 }
 
 .big-container {
@@ -44,4 +44,22 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
+  padding-bottom: 10px;
+}
+
+.login-text {
+  color: white !important;
+  padding-bottom: 5px;
+}
+
+.placeholder {
+  color: white !important;
+}
+
+.form-label {
+  color: black;
+}
+
+.login100-form-btn {
+  color : white;
 }
