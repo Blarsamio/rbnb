@@ -5,7 +5,7 @@
   overflow: hidden;
   border-radius: 10px;
   padding: 55px 55px 37px;
-  background: -webkit-linear-gradient(top,#3795e6,#acc196);
+  background: #0d1b2a;
 }
 
 .bigg-container {
@@ -37,11 +37,17 @@
   background-color: transparent;
 }
 
-.login-title {
+.sign-title {
   font-size : 30px;
   color: white;
   line-height : 1.2;
   text-align: center;
   text-transform: uppercase;
   display: block;
+  padding-bottom: 10px;
+}
+
+.login-text {
+  color: white !important;
+  padding-bottom: 5px;
 }
