@@ -4,7 +4,7 @@
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "$ Find the language that you need",
+            placeholder: "$ Find the programming language you need",
             style: "height: 46px;"
           %>
 </div>
@@ -18,17 +18,17 @@
    <div class="row justify-content-center">
    <% if @mydev == nil %>
     <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
-      <div class="flip-card-inner">
+      <div class="flip-card-inner my-card">
         <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
-          <img src='https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png' alt="" width="100" class="rounded-circle">
-          <h5 class="mb-0">You!</h5><span class="small text-uppercase text-muted">Expert in: _____<br> your-email@you.com </span>
+          <img src="https://pbs.twimg.com/profile_images/1220073059467583496/y2rLoig5_400x400.jpg" alt="" width="100" class="rounded-circle">
+          <b><h5 class="mb-0">Become a developer</h5></b><span class="small text-uppercase text-muted">Expert in: _____<br> your-email@you.com </span>
           <ul class="list-inline">
             <li class="list-inline-item"><i class="fas fa-star"></i></li>
           </ul>
         </div>
         <div class="flip-card-back d-flex flex-column justify-content-between rounded">
-          <h2 class='b-back'>Become a developer today!</h2>
-          <span class="small text-uppercase text-muted"></span>
+          <h2 class='b-back'>Apply today!</h2>
+          <span class="small text-uppercase text-muted">Become a developer in one easy step. Apply today and change your life.</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="flip-card-back d-flex flex-column justify-content-between rounded">
-              <h2 class='b-back'>This is me!</h2>
+              <h2 class='b-back'>My Account</h2>
               <span class="small text-uppercase text-muted"><%= @mydev.description %></span>
               <ul class="social mb-0 list-inline mt-3">
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
@@ -83,7 +83,7 @@
             </div>
             <div class="flip-card-back d-flex flex-column justify-content-between rounded">
               <h2 class='pt-3 b-back'>Why me?</h2>
-                <span class="small text-uppercase text-muted" id="description"><%= d.description %></span>
+                <span class="small text-uppercase text-muted overflow-auto" id="description"><%= d.description %></span>
               <ul class="social mb-0 list-inline mt-3">
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
