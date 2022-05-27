@@ -44,10 +44,22 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 
 .login-text {
   color: white !important;
   padding-bottom: 5px;
+}
+
+#user_email {
+  height: 50px;
+}
+
+#user_password {
+  height: 50px;
+}
+
+#user_password_confirmation {
+  height: 50px;
 }
