@@ -1,0 +1,74 @@
+<div class="row py-5 px-4 back">
+  <div class="col-md-5 mx-auto"> <!-- Profile widget -->
+    <div class="bg-white shadow rounded overflow-hidden">
+      <div class="px-4 pt-0 pb-4 cover">
+        <div class="media align-items-end profile-head d-flex">
+          <div class="profile mr-3">
+            <%= image_tag(@developer.photo, class: [:rounded, "mb-2", "img-thumbnail", :width]) %>
+              <div class="media-body mb-5 text-white">
+                <h4 class="mt-0 mb-0"><%= @developer.first_name %> <%= @developer.last_name %></h4>
+                <p class="small mb-4">
+                <i class="fas fa-map-marker-alt mr-2"></i> <%= @developer.address %></p>
+              </div>
+            <a href="#form" class="btn btn-outline-dark btn-sm btn-block">book a project</a></div>
+            </div>
+          </div>
+          <div class="bg-light p-4 d-flex justify-content-end text-center">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <h5 class="font-weight-bold mb-0 d-block">215</h5>
+                <small class="text-muted">
+                <i class="mr-1"></i>Projects</small> </li>
+                <li class="list-inline-item">
+                <h5 class="font-weight-bold mb-0 d-block">745</h5>
+                <small class="text-muted"> <i class="mr-1"></i>Followers</small></li>
+                <li class="list-inline-item">
+                <h5 class="font-weight-bold mb-0 d-block"><%= @developer.rating %></h5>
+                <small class="text-muted">
+                <i class="mr-1"></i>Rating</small>
+              </li>
+              </ul>
+          </div>
+          <div class="about-hdr">
+            <div class="px-4 py-3 radius">
+			        <div class="hdr"><span class="title">about-me — bash — 80x<span class="terminal-height">10</span></span></div>
+                <div class="about-main p-4">
+                   <span class="element2"></span><span class="typed-cursor"></span>
+                   <br>
+                      <p class="element2 hidden"> web developer, expert in: <%= @developer.language %></p>
+                      <p class="element2 hidden">lives in: <%= @developer.address %></p>
+                      <p class="element2 hidden"><%= @developer.user.email %></p>
+                      <p class="element2 hidden"><%= @developer.description %></p>
+                </div>
+            </div>
+          </div>
+          <div class="py-4 px-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class="mb-0">Recent projects</h5>
+            <a href="#" class="btn btn-link text-muted">Show all</a>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 mb-2 pr-lg-1">
+              <img src="https://cdn.dribbble.com/users/6234/screenshots/17430129/media/604770912834878b021248a226c51f60.png?compress=1&resize=1200x900&vertical=top" alt="" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 col-md-6 mb-2 pl-lg-1">
+              <img src="https://cdn.dribbble.com/users/6234/screenshots/17414052/media/d0144931ecf137ec49677dfff5fcd161.png?compress=1&resize=1200x900&vertical=top" alt="" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 col-md-6 pr-lg-1 mb-2">
+              <img src="https://cdn.dribbble.com/users/6234/screenshots/17396277/media/8119a1bd3b5784b7acc868fa09df1c38.png?compress=1&resize=1200x900&vertical=top" alt="" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 col-md-6 pl-lg-1">
+              <img src="https://cdn.dribbble.com/users/6234/screenshots/16843254/media/16daa34ccde6dd68d699264d205c6487.png?compress=1&resize=1200x900&vertical=top" alt="" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class='form'>
+        <%= simple_form_for [@developer, @booking] do |f| %>
+        <%= f.input :job, :as => :text, label: 'describe-the-work-you-want — bash — 80x' %>
+        <%= f.submit :book , class: 'btn btn-outline-dark btn-sm btn-block'%>
+        <% end %>
+    </div>
+  </div>
+</div>

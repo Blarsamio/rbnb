@@ -11,3 +11,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/cards";
+@import "pages/show-dev";
+// @import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
+// @import "https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js";
+// @import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
+@import "components/login";
+@import "components/sign_up";
+@import "pages/contact";
+@import "pages/new-dev";
+@import "pages/dev-index";
+
+.main-container {
+  min-height: calc(100vh - 50px - 152px);
+}

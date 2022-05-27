@@ -1,0 +1,99 @@
+<div class="index-container">
+	<div class="title-bar"><span class="title">${developer.all} — bash — 80x<span class="terminal-height">10</span></span></div>
+        <%= form_tag developers_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "$ Find the language that you need",
+            style: "height: 46px;"
+          %>
+</div>
+  <div class="btn-container">
+    <%= submit_tag "Search", class: "btn btn-outline-dark btn-sm btn-block" %>
+  </div>
+    <% end %>
+
+
+   <div class="row justify-content-center">
+   <% if @mydev == nil %>
+    <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
+      <div class="flip-card-inner">
+        <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
+          <img src='https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png' alt="" width="100" class="rounded-circle">
+          <h5 class="mb-0">You!</h5><span class="small text-uppercase text-muted">Expert in: _____<br> your-email@you.com </span>
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fas fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="flip-card-back d-flex flex-column justify-content-between rounded">
+          <h2 class='b-back'>Become a developer today!</h2>
+          <span class="small text-uppercase text-muted"></span>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+          <%= link_to '$ Developer.new', new_developer_path, class: 'btn btn-primary hire-btn' %>
+        </div>
+      </div>
+    </div>
+    <% else %>
+            <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
+            <div class="flip-card-inner main-card">
+              <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
+              <%= image_tag @mydev.photo, class: "rounded-circle" %>
+                <h5 class="mb-0"><%= @mydev.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <em><%= @mydev.language %></em><br> <%= @mydev.user.email %> </span>
+                <% rating = @mydev.rating.to_i %>
+                <ul class="list-inline">
+                  <% rating.times do %>
+                    <li class="list-inline-item"></li><i class="fas fa-star"></i></li>
+                  <% end %>
+                </ul>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-between rounded">
+              <h2 class='b-back'>This is me!</h2>
+              <span class="small text-uppercase text-muted"><%= @mydev.description %></span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+              <%= link_to 'Edit profile', edit_user_registration_path, class: 'btn btn-primary hire-btn unround' %>
+              <%= link_to 'My Bookings', bookings_path, class: 'btn btn-primary hire-btn' %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+      <% @developers.each do |d| %>
+      <% next if d.user == current_user %>
+        <div class="col-xl-3 col-sm-6 mb-3 flip-card border">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex flex-column justify-content-around align-items-center shadow-sm rounded">
+              <%= image_tag d.photo, class: "rounded-circle" %>
+                <h5 class="mb-0"><%= d.first_name %></h5><span class="small text-uppercase text-muted">Expert in: <em><%= d.language %></em><br> <%= d.user.email %> </span>
+                <% rating = d.rating.to_i %>
+                <ul class="list-inline">
+                  <% rating.times do %>
+                    <li class="list-inline-item"></li><i class="fas fa-star"></i></li>
+                  <% end %>
+                </ul>
+            </div>
+            <div class="flip-card-back d-flex flex-column justify-content-between rounded">
+              <h2 class='b-back'>Why me?</h2>
+              <span class="small text-uppercase text-muted"><%= d.description %></span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+              <%= link_to 'Hire', developer_path(d), class: 'btn btn-primary rounded-bottom hire-btn' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
