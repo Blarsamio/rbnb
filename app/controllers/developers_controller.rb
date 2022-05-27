@@ -31,6 +31,15 @@ class DevelopersController < ApplicationController
     end
   end
 
+  def edit
+    @developer = Developer.find(params[:id])
+  end
+
+  def update
+    @developer = Developer.find(params[:id])
+    @developer.update(developers_params)
+  end
+
   private
 
   def developers_params
