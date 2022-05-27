@@ -3,7 +3,7 @@ class Developer < ApplicationRecord
   has_one_attached :photo
 
   validates :description, :first_name, :last_name, :address, :photo, presence: true
-  validates :description, length: { maximum: 100 }
+  validates :description, length: { maximum: 200 }
     include PgSearch::Model
     pg_search_scope :search_by_language,
     against: %i[language],

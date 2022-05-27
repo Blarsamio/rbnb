@@ -97,7 +97,7 @@ developer.save
 
 image = URI.open("https://res.cloudinary.com/diwzbnjyi/image/upload/v1653575767/y8mms8cqppqqobgmyqx3.jpg")
 user = User.create(email: Faker::Internet.free_email, password: 'hellop')
-developer = Developer.new(first_name: 'Luis', rating: Faker::Number.between(from: 1, to: 5), description: 'I like to play soccer and go to the gym. I took a semester off in my university to attend a bootcamp and meet new people in a new city. After this bootcamp I plan to land a great job and continue my studies.', last_name: 'Hernandez', address: Faker::Address.full_address, language: Faker::ProgrammingLanguage.name)
+developer = Developer.new(first_name: 'Luis', rating: Faker::Number.between(from: 1, to: 5), description: 'I took a semester off in my university to attend a bootcamp and meet new people in a new city. I plan to land a great job and continue my studies.', last_name: 'Hernandez', address: Faker::Address.full_address, language: Faker::ProgrammingLanguage.name)
 developer.photo.attach(io: image, filename: "student#{counter}.jpg", content_type: 'image/png')
 developer.user = user
 developer.save
