@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     if @developer
       @booked = Booking.where(developer_id: @developer.id).where(status: false)
     end
-    @accepted = @bookings.where(status: true)
+    @accepted = @bookings.where(status: true).where(developer_id: @developer.id)
   end
 
   def accept
