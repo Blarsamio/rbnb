@@ -15,6 +15,9 @@
           <%# <li class="nav-item">
             <%= link_to "My bookings", bookings_path, class: "nav-link" %>
           <%# </li> %>
+          <% if current_user.developer.nil? %>
+            <%= image_tag "https://pbs.twimg.com/profile_images/1220073059467583496/y2rLoig5_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
           <li class="nav-item dropdown">
             <%= image_tag current_user.developer.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -23,6 +26,7 @@
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
+          <% end %>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
