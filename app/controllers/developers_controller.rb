@@ -6,18 +6,28 @@ class DevelopersController < ApplicationController
     else
       @developers = Developer.all
     end
-    if @developers.find_by(user_id: current_user.id)
-      @mydev = @developers.find_by(user_id: current_user.id)
+    if current_user
+      if @developers.find_by(user_id: current_user.id)
+        @mydev = @developers.find_by(user_id: current_user.id)
+      end
     end
   end
 
   def show
-    @booking = Booking.new
-    @developer = Developer.find(params[:id])
+    if current_user
+      @booking = Booking.new
+      @developer = Developer.find(params[:id])
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def new
-    @developer = Developer.new
+    if current_user
+      @developer = Developer.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
