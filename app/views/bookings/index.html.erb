@@ -1,32 +1,43 @@
-<div id="container">
-  <h1>My bookings</h1>
+<div class="container">
   <div class="row justify-content-around">
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <h3>Bookings I made</h3>
-      <div class="booking">
+        <h3 class='booking'>Requests</h3>
+      <div class="d-flex flex-column">
         <% @bookings.each do |b| %>
-          <li>Dev email: <%= b.developer.user.email %> <br> Job Description: <%= b.job %></li>
+          <li class='card book d-flex flex-row justify-content-between request'>
+            <div>
+              <b>Developer: </b><%= b.developer.first_name %> <%= b.developer.last_name %> <br><b>Project: </b><%= b.job %>
+              </div>
+              <div class="align-self-center status">
+              <% if b.status == true %>
+                ✅
+                <% else %>
+                🕒
+              <% end %>
+            </div>
+          </li>
         <% end %>
       </div>
     </div>
   <% if @developer %>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <h3>Booking requested for me</h3>
-      <div class="booked">
+        <h3 class='booking'>My Bookings</h3>
+      <div class="d-flex flex-column">
         <% @booked.each do |b| %>
-          <li>User email: <%= b.user.email %> <br> <%= b.job %> <br> <%= link_to 'Accept task', accept_path(b), class: "btn btn-primary" %> <%= link_to "Reject task", reject_path(b),method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></li>
+          <li class='card book'><b>e-mail: </b><%= b.user.email %> <br><b>Project: </b> <%= b.job %> <br> <div class='d-flex'><%= link_to 'Accept', accept_path(b), class: "btn btn-accept" %> <%= link_to "Reject", reject_path(b),method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-reject" %></div></li>
         <% end %>
       </div>
     </div>
-      <br>
+    <br>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <h3>Accepted bookings</h3>
-      <div class="accepted">
+        <h3 class='accepted'>Accepted</h3>
+      <div class="accepted d-flex flex-column">
         <% @accepted.each do |b| %>
-        <li>User email: <%= b.user.email %> <br> Job Description: <%= b.job %></li>
+        <li class='card book'><b>e-mail: </b><%= b.user.email %> <br> <b>Project: </b> <%= b.job %></li>
         <% end %>
       </div>
     </div>
   <% end %>
+   <% end %>
   </div>
 </div>

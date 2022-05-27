@@ -6,7 +6,6 @@ class DevelopersController < ApplicationController
     else
       @developers = Developer.all
     end
-
     if @developers.find_by(user_id: current_user.id)
       @mydev = @developers.find_by(user_id: current_user.id)
     end
