@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get 'home', to: 'pages#home'
-  resources :developers, only: %i[create index new show] do
+  resources :developers, only: %i[create index new show edit update] do
     resources :bookings, only: :create
   end
   resources :bookings, only: %i[index destroy]

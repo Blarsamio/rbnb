@@ -70,6 +70,15 @@ h1 {
   object-fit: cover;
 }
 
+#description{
+    padding: 0px 5px;
+    display: block;
+    width: 280px;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+=======
 .main-card {
   color: #1B263B;
 }
