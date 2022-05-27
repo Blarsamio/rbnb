@@ -1,12 +1,12 @@
-.form-style-5{
-	max-width: 500px;
-	padding: 10px 20px;
-	background: #f4f7f8;
-	margin: 10px auto;
-	padding: 20px;
-	background: #f4f7f8;
-	border-radius: 8px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+.sign-container-dev{
+  display : flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 25px 55px 37px;
+  background: #0d1b2a;
 }
 .form-style-5 fieldset{
 	border: none;
@@ -100,6 +100,42 @@
 	background: #109177;
 }
 
-.height {
-  height: 45px !important;
+#developer_last_name {
+  height: 50px;
+}
+
+#developer_first_name {
+  height: 50px;
+}
+
+#developer_address {
+  height: 50px;
+  padding-bottom: 25px;
+}
+
+.languages {
+  padding-top: 25px;
+  padding-bottom : 25px;
+}
+
+.login-logo-dev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width : 120px;
+  height : 120px;
+  border-radius : 50%;
+  color: white;
+  font-size : 60px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.bootun {
+  padding-top: 25px;
+}
+
+.input-photo {
+  padding-top: 25px;
+  align-items: center;
 }

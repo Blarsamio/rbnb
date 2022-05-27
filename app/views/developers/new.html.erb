@@ -1,29 +1,37 @@
-<div class="form-style-5">
-<%= simple_form_for @developer do |f| %>
-<fieldset>
-<legend><span class="number">1</span> Developer Info</legend>
-<%= f.input :first_name, placeholder:"Your First Name *", label: false %>
-<%= f.input :last_name, placeholder:"Your Last Name *", label: false %>
-<%= f.input :description, as: :text, placeholder:"About yourself, special skills, your hourly rate", label: false %>
-<label for="language">Preferred Programmimg language</label>
-<select id="language" name="language">
-<optgroup>
-  <option value="javascript">JavaScript</option>
-  <option value="php">PHP</option>
-  <option value="java">Java</option>
-  <option value="golang">Golang</option>
-  <option value="python">Python</option>
-  <option value="c#">C#</option>
-  <option value="C++">C++</option>
-  <option value="erlang">Erlang</option>
-</optgroup>
-</select>
-</fieldset>
-<fieldset>
-<legend><span class="number">2</span> Additional Info</legend>
-<%= f.input :address, placeholder:"Your Address *", label: false, class: 'height' %>
-<%= f.file_field :photo, placeholder:"Profile picture URL *", label: false %>
-</fieldset>
-<%= f.submit :submit %>
-<% end %>
+<div class="bigg-container">
+  <div class="sign-container-dev">
+  <span class="login-logo-dev">
+    <i class="fas fa-code"></i>
+  </span>
+    <%= simple_form_for @developer do |f| %>
+    <fieldset>
+    <legend><span class="number"></span> < developer info ></legend>
+    <%= f.input :first_name, placeholder:"< your first name >", label: "first-name - bash - 80x10" %>
+    <%= f.input :last_name, placeholder:"< your last name >", label: "last-name - bash - 80x10" %>
+    <%= f.input :description, as: :text, placeholder:"< about yourself, special skills, your hourly rate >", label: "description - bash - 80x10" %>
+    <div class="languages">
+    <label for="language">preffered programming languages</label>
+    <select id="language" name="language">
+    <optgroup>
+      <option value="javascript">JavaScript</option>
+      <option value="php">PHP</option>
+      <option value="java">Java</option>
+      <option value="golang">Golang</option>
+      <option value="python">Python</option>
+      <option value="c#">C#</option>
+      <option value="C++">C++</option>
+      <option value="erlang">Erlang</option>
+      <option value="ruby">Ruby</option>
+    </optgroup>
+    </select>
+    </fieldset>
+    <fieldset>
+    <legend><span class="number"></span> < additional info ></legend>
+    <%= f.input :address, placeholder:"< your address >", label: "address - bash - 80x10" %>
+    <%= f.file_field :photo, placeholder:"Profile picture URL *", label: false, class: "input-photo" %>
+    </fieldset>
+    <div class="bootun">
+    <%= f.submit :submit, class: "btn btn-primary"%>
+    <% end %>
+  </div>
 </div>
